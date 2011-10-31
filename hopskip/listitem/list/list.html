@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Hopskip: list items
+		</title>
+<link rel="stylesheet" href="../../globals.css"> <link rel="stylesheet" href="../../typography.css"><link rel="stylesheet" href="../../hopskip.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>
+				Hopskip 
+			</h1>
+			<ol id="listitems">
+			</ol>
+			<form action="#" id="create">
+				<fieldset>
+					<legend>
+						More list items 
+					</legend>
+					<label for="name">
+						Add 
+					</label>
+					<input type="text" name="name" id="add_to_list" /> 
+					<button>
+						Submit 
+					</button>
+				</fieldset>
+			</form>
+		</div>
+<script type='text/javascript' src='../../../steal/steal.js'>
+        </script> <script type='text/javascript'>
+			steal('hopskip/listitem/list','hopskip/fixtures',function(){
+				
+				$('#listitems').hopskip_listitem_list();
+				
+				$('#create').click(function(){
+					new Hopskip.Models.Listitem({
+						name: "Grilled Cheese",
+						description: "Bread and Cheese"
+					}).save();
+				})
+			})
+		</script> 
+	</body>
+</html>

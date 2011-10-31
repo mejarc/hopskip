@@ -1,0 +1,5 @@
+<%for(var i = 0; i < this.length ; i++){%>
+	<li <%= this[i]%>>
+		<span><%== $.View('//hopskip/listitem/list/views/listitem.ejs', this[i] )%></span>
+	</li>
+<%}%>
